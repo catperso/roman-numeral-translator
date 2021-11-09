@@ -1,4 +1,4 @@
-function romanNumerals(number) {
+export default function romanNumerals(number) {
   if (!parseInt(number)) {
     return "'NaN'";
   }
@@ -32,36 +32,3 @@ function romanNumerals(number) {
 
   return output.join('');
 }
-
-//input.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"").replace(/\s{2,}/g,"");
- /*
-take the input
-remove the punctuation
-split into array of multiple numbers
-array.foreach(function(element) {
-  print romanNumerals(element) + " "
-})
-
-print all the returns followed by spaces
-*/
-
-$(document).ready(function() {
-  $("#number").submit(function(event) {
-    event.preventDefault();
-
-    //sanitize the input of all excess punctuation and spaces
-    let input = $("#input").val().replace(/[.,\/#!$%?\^&\*;:{}=\-_`~()]/g,"").replace(/\s{2,}/g," ");
-    let inputArr = input.split(' ');
-    let outputArr = [];
-
-    inputArr.forEach(function(element) {
-      outputArr.push(romanNumerals(element));
-    });
-    
-    $("ul").empty();
-
-    outputArr.forEach(function(number) {
-      $("ul").append("<li>" + number + "</li>");
-    });
-  });
-});
