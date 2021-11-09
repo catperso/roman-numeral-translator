@@ -22,8 +22,8 @@ _Converts numbers to their equivalent in roman numerals. Only works on numbers f
 ## Setup/Installation Requirements
 
 * _Clone this repository to your local device_
-* _Run index.html in your browser_
-* _Enjoy the lovely CSS_
+* _run 'npm install' and 'npm run build' from the terminal in the project directory_
+* _run './dist/index.html' in your browser_
 
 ## Known Bugs
 
