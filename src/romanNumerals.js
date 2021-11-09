@@ -1,4 +1,7 @@
 export default function romanNumerals(number) {
+  if (parseInt(number) === 0) {
+    return "'Too Small'";
+  }
   if (!parseInt(number)) {
     return "'NaN'";
   }
